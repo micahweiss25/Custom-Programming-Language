@@ -1,0 +1,20 @@
+project/project/
+target/
+cache/
+.bsp/
+make/
+null/
+*.tests
+*.soln
+*.save
+*.jar
+*.class
+*.doc
+*.docx
+*.pdf
+
+# ignore detritus left by vim
+*.swn
+*.swo
+*.swp
+*~
