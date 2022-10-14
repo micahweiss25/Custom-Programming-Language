@@ -1,0 +1,14 @@
+[info] welcome to sbt 1.5.3 (AdoptOpenJDK Java 11.0.9.1)
+[info] loading project definition from C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\project
+[info] loading settings for project root from build.sbt ...
+[info] set current project to homeworks (in build file:/C:/Users/Micah.Weiss/OneDrive%20-%20West%20Point/AY%2023-1/CS487/HW/hw4/problem-set-4-micahweiss25/)
+[error] server failed to start on local:sbt-server-3ac3cb8cd36a491afaef. java.io.IOException: Could not create lock for \\.\pipe\sbt-server-3ac3cb8cd36a491afaef_lock, error 5
+CS478: hw4 (EECS Tester 0.7.0delta5)
+ADD YOUR NAME(S) HERE
+tokens are List(PUNC(LPAREN), KEYW(FN), PUNC(COMMA), ID(factorial), PUNC(COMMA), PUNC(LPAREN), ID(n), PUNC(RPAREN), PUNC(COMMA), PUNC(LPAREN), KEYW(IF), PUNC(COMMA), PUNC(LPAREN), KEYW(GREATER), PUNC(COMMA), ID(n), PUNC(COMMA), LIT(INT(1)), PUNC(RPAREN), PUNC(COMMA), PUNC(LPAREN), KEYW(MULTIPLY), PUNC(COMMA), ID(n), PUNC(COMMA), PUNC(LPAREN), ID(factorial), PUNC(COMMA), PUNC(LPAREN), KEYW(SUBTRACT), PUNC(COMMA), ID(n), PUNC(COMMA), LIT(INT(1)), PUNC(RPAREN), PUNC(RPAREN), PUNC(RPAREN), PUNC(COMMA), LIT(INT(1)), PUNC(RPAREN), PUNC(RPAREN), PUNC(LPAREN), ID(write), PUNC(COMMA), PUNC(LPAREN), ID(factorial), PUNC(COMMA), LIT(FLT(-312.01)), PUNC(RPAREN), PUNC(RPAREN), PUNC(LPAREN), ID(write), PUNC(COMMA), LIT(STR('string literal')), PUNC(RPAREN))
+List(FN_DECLARATION(factorial,List(n),IF_STATEMENT(BINARY_OPERATION(GREATER,VARIABLE_REFERENCE(n),LIT(INT(1))),BINARY_OPERATION(MULTIPLY,VARIABLE_REFERENCE(n),FN_CALL(factorial,List(BINARY_OPERATION(SUBTRACT,VARIABLE_REFERENCE(n),LIT(INT(1)))))),LIT(INT(1)))), FN_CALL(write,List(FN_CALL(factorial,List(LIT(FLT(-312.01)))))), FN_CALL(write,List(LIT(STR('string literal')))))
+[success] Total time: 2 s, completed Oct 13, 2022, 11:15:47 PM
+[info] 1. Monitoring source files for root/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[error] server failed to start on local:sbt-server-3ac3cb8cd36a491afaef. java.io.IOException: Could not create lock for \\.\pipe\sbt-server-3ac3cb8cd36a491afaef_lock, error 5
+[info] Received input event: CancelWatch.

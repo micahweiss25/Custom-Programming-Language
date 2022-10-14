@@ -1,0 +1,10 @@
+(@fn,factorial,
+    (n),
+    (@if, {conditional statement in form of if a then b else c}
+    (>,n,1),
+    (*,n,(factorial,(-,n,1)))
+    ,1)
+  )
+  {write the result}
+(write,(factorial,-312.01))
+(write, 'string literal')
