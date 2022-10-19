@@ -263,11 +263,22 @@ object hw4 extends eecs.cs478:
           (env, Lit.VOID)
         case Function.Read => (env, Lit.STR(readLine()))
         //Add more of these read functions, for boolean, float, int, etc.
-        case Function.Custom(code) => ???
+        case Function.Custom(code) => (env, execute_single_astnode(code, env)._2)
       
-      case ASTNode.LITERAL(lit) => ???
-      case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => ???
-      case ASTNode.FN_DECLARATION(name, args, body) => ???
+      case ASTNode.LITERAL(lit) => (env, lit)
+      case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => 
+        if execute_single_astnode(cond, env)._2 match //various things that can be used inside of conditionals
+          case Lit.FLT(f) => !f.isNaN()
+          case Lit.INT(i) => i != 0
+          case Lit.STR(s) => s != ""
+          case Lit.BOOL(b) => b
+          case Lit.VOID => false
+        then
+          execute_single_astnode(ifTrue, env)
+        else
+          execute_single_astnode(ifFalse, env)
+      case ASTNode.FN_DECLARATION(name, args, body) => 
+        Environment(Map(name -> Function.Custom(body)))
       case ASTNode.VARIABLE_REFERENCE(name) => ???
       case ASTNode.LIT(lit) => (env, lit)
       case ASTNode.BINARY_OPERATION(operation, left, right) => ???
