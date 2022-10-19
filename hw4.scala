@@ -1,3 +1,4 @@
+import scala.io.StdIn.readLine
 object hw4 extends eecs.cs478:
   def userName = "ADD YOUR NAME(S) HERE"
 
@@ -259,9 +260,9 @@ object hw4 extends eecs.cs478:
               case Lit.STR(s) => print(s)
               case Lit.BOOL(b) => print(b)
               case Lit.VOID => print("You just printed nothing lol")
-            
           (env, Lit.VOID)
-        case Function.Read => ???
+        case Function.Read => (env, Lit.STR(readLine()))
+        //Add more of these read functions, for boolean, float, int, etc.
         case Function.Custom(code) => ???
       
       case ASTNode.LITERAL(lit) => ???
