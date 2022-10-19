@@ -295,7 +295,7 @@ object hw4 extends eecs.cs478:
         val rightEval = execute_single_astnode(right, leftEval._1)
         (leftEval, rightEval) match
           case (Lit.FLT(l), Lit.FLT(r)) => 
-            operators match
+            operation match
               case BinaryOperations.ADD => (rightEval._1, Lit.FLT(l + r))
               case BinaryOperations.SUBTRACT => (rightEval._1, Lit.FLT(l - r))
               case BinaryOperations.DIVIDE => (rightEval._1, Lit.FLT(l / r))
@@ -309,7 +309,7 @@ object hw4 extends eecs.cs478:
               case BinaryOperations.AND => if !l.isNaN() && !r.isNaN() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.OR => if !l.isNaN() || !r.isNaN() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
           case (Lit.INT(l), Lit.INT(r)) =>
-            operators match
+            operation match
               case BinaryOperations.ADD => (rightEval._1, Lit.INT(l + r))
               case BinaryOperations.SUBTRACT => (rightEval._1, Lit.INT(l - r))
               case BinaryOperations.DIVIDE => (rightEval._1, Lit.INT(l / r))
@@ -323,7 +323,7 @@ object hw4 extends eecs.cs478:
               case BinaryOperations.AND => if l != 0 && r != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.OR => if l != 0 || r != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
           case (Lit.STR(l), Lit.STR(r)) =>
-            operators match
+            operation match
               case BinaryOperations.ADD => (rightEval._1, Lit.STR(l + r))
               case BinaryOperations.NOTEQUAL => if l != r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.EQUALS => if l == r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
@@ -334,12 +334,45 @@ object hw4 extends eecs.cs478:
               case BinaryOperations.AND => if l != "" && r != "" then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.OR => if l != "" || r != "" then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
           case (Lit.BOOL(l), Lit.BOOL(r)) =>
-            operators match
+            operation match
               case BinaryOperations.NOTEQUAL => if l != r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.EQUALS => if l == r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.AND => if l && r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
               case BinaryOperations.OR => if l || r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
-          
+          case (Lit.STR(l), Lit.BOOL(r)) => 
+            operation match
+              case BinaryOperations.NOTEQUAL => if l != r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.EQUALS => if l == r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.AND => if l != "" && r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.OR => if l != "" || r then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+          case (Lit.STR(l), Lit.INT(r)) => 
+            operation match
+              case BinaryOperations.NOTEQUAL => if l != r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.EQUALS => if l == r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.AND => if l != "" && r != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.OR => if l != "" || r != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+          case (Lit.STR(l), Lit.FLT(r)) =>
+            operation match
+              case BinaryOperations.NOTEQUAL => if l != r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.EQUALS => if l == r.toString() then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.AND => if l != "" && r != 0.0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.OR => if l != "" || r != 0.0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+          case (Lit.INT(l), Lit.FLT(r)) =>
+            operation match
+              case BinaryOperations.ADD => (rightEval._1, Lit.FLT(l + r.toInt))
+              case BinaryOperations.SUBTRACT => (rightEval._1, Lit.FLT(l - r.toInt))
+              case BinaryOperations.MULTIPLY => (rightEval._1, Lit.FLT(l * r.toInt))
+              case BinaryOperations.DIVIDE => (rightEval._1, Lit.FLT(l / r.toInt))
+              case BinaryOperations.NOTEQUAL => if l != r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.EQUALS => if l == r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.LESS => if l < r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.LESSEQUAL => if l <= r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.GREATER => if l > r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.GREATEREQUAL => if l >= r.toInt then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.AND => if l != 0 && r.toInt != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+              case BinaryOperations.OR => if l != 0 || r.toInt != 0 then (rightEval._1, Lit.BOOL(true)) else (rightEval._1, Lit.BOOL(false))
+
+          case _ => ???
 
   @main def rum =
     val tokens = wrapperFunction("hello_world.lang")
