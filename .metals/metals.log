@@ -1,0 +1,283 @@
+2022.10.12 10:43:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\.metals\lsp.trace.json or C:\Users\Micah.Weiss\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.10.12 10:43:41 INFO  logging to file C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\.metals\metals.log
+2022.10.12 10:43:41 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25' for client Visual Studio Code 1.71.2.
+2022.10.12 10:43:44 INFO  time: initialize in 3.4s
+2022.10.12 10:43:48 WARN  Build server is not auto-connectable.
+2022.10.12 10:43:48 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:43:56 INFO  no build target found for C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala. Using presentation compiler with project's scala-library version: 3.2.0
+Oct 12, 2022 10:43:56 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2022.10.12 10:43:59 INFO  time: code lens generation in 9.31s
+2022.10.12 10:44:23 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:44:23 INFO  skipping build import with status 'Dismissed'
+2022.10.12 10:45:33 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:45:34 INFO  skipping build import with status 'Dismissed'
+2022.10.12 10:47:30 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:48:09 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:48:09 INFO  skipping build import with status 'Dismissed'
+2022.10.12 10:48:21 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:48:21 INFO  skipping build import with status 'Dismissed'
+2022.10.12 10:49:46 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:51:25 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:51:25 INFO  skipping build import with status 'Dismissed'
+2022.10.12 10:55:34 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:55:55 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.12 10:55:55 INFO  skipping build import with status 'Dismissed'
+2022.10.13 22:06:28 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\.metals\lsp.trace.json or C:\Users\Micah.Weiss\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.10.13 22:06:30 INFO  logging to file C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\.metals\metals.log
+2022.10.13 22:06:30 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25' for client Visual Studio Code 1.71.2.
+2022.10.13 22:06:35 INFO  time: initialize in 5.33s
+2022.10.13 22:06:37 WARN  Build server is not auto-connectable.
+2022.10.13 22:06:37 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.13 22:06:43 INFO  no build target found for C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.10.13 22:06:47 INFO  time: code lens generation in 8.63s
+Oct 13, 2022 10:17:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 353
+Oct 13, 2022 10:17:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 376
+Oct 13, 2022 10:18:42 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2499)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.isForComprehensionOwner$1(PcDocumentHighlightProvider.scala:163)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.collectNames$1(PcDocumentHighlightProvider.scala:178)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.$anonfun$4(PcDocumentHighlightProvider.scala:275)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1548)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1616)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1576)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1574)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1623)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1630)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1627)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1636)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1541)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.highlights(PcDocumentHighlightProvider.scala:276)
+
+Oct 13, 2022 10:18:43 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2499)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.isForComprehensionOwner$1(PcDocumentHighlightProvider.scala:163)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.collectNames$1(PcDocumentHighlightProvider.scala:178)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.$anonfun$4(PcDocumentHighlightProvider.scala:275)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1548)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1556)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1568)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1568)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1576)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1574)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1623)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1630)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1627)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1636)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1541)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.highlights(PcDocumentHighlightProvider.scala:276)
+
+Oct 13, 2022 10:30:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 990
+Oct 13, 2022 10:30:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 991
+2022.10.13 22:32:42 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS487\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 13, 2022 10:32:43 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.10.13 22:41:52 INFO  shutting down Metals
+2022.10.18 19:28:34 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\.metals\lsp.trace.json or C:\Users\Micah.Weiss\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.10.18 19:28:36 INFO  logging to file C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\.metals\metals.log
+2022.10.18 19:28:36 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25' for client Visual Studio Code 1.72.2.
+2022.10.18 19:28:40 INFO  time: initialize in 3.16s
+2022.10.18 19:28:44 WARN  Build server is not auto-connectable.
+2022.10.18 19:28:44 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:28:53 INFO  no build target found for C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.10.18 19:29:01 INFO  time: code lens generation in 6.83s
+2022.10.18 19:29:01 INFO  time: code lens generation in 5.81s
+2022.10.18 19:29:01 INFO  time: code lens generation in 4.71s
+2022.10.18 19:29:01 INFO  time: code lens generation in 2.77s
+2022.10.18 19:29:01 INFO  time: code lens generation in 14s
+2022.10.18 19:29:01 INFO  time: code lens generation in 3.67s
+2022.10.18 19:29:29 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:30:42 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:30:43 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:30:46 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:30:46 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:30:51 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:30:51 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:31:49 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:34:48 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 7:35:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 547
+2022.10.18 19:36:32 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:36:32 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:36:38 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:36:38 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:39:50 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:41:54 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:42:05 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:42:05 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:42:31 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:42:31 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:43:53 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:43:53 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:44:45 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:45:19 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:45:19 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:45:39 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:45:39 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:45:50 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:45:51 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:45:51 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:46:35 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:46:35 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 7:46:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.10.18 19:47:02 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:47:17 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:47:17 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 7:47:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1496
+2022.10.18 19:47:31 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:47:31 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:48:28 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:48:28 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:48:30 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:48:30 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:48:36 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:48:36 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:48:41 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:48:41 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:48:46 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:48:46 INFO  skipping build import with status 'Dismissed'
+2022.10.18 19:49:06 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:49:15 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:49:15 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 7:54:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1662
+2022.10.18 19:57:59 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:58:25 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 19:58:25 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:01:27 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:01:47 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:01:47 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:01:59 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:01:59 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:02:02 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:02:02 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:02:09 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:02:09 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:02:18 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:02:18 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:02:35 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:02:35 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:02:38 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:02:39 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:03:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1997
+Oct 18, 2022 8:06:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2171
+2022.10.18 20:06:09 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:06:17 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:06:17 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:06:34 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:06:34 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 8:08:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Oct 18, 2022 8:10:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2554
+Oct 18, 2022 8:10:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2559
+2022.10.18 20:10:57 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:11:12 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:11:12 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 8:11:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2607
+Oct 18, 2022 8:13:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2830
+2022.10.18 20:15:03 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:16:29 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:16:29 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:17:04 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:19:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3200
+2022.10.18 20:21:17 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:21:29 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:21:29 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:21:30 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:21:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3425
+2022.10.18 20:21:50 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:21:50 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:22:32 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:22:32 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 8:23:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3624
+2022.10.18 20:24:13 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:26:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.10.18 20:27:02 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:27:32 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:27:32 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:28:46 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:28:46 INFO  skipping build import with status 'Dismissed'
+Oct 18, 2022 8:30:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3927
+2022.10.18 20:31:27 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:32:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4051
+2022.10.18 20:33:19 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:33:19 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:35:47 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:37:11 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:37:11 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:40:51 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:41:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4463
+2022.10.18 20:43:52 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:44:16 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:44:16 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:44:33 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:44:33 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:44:41 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:44:41 INFO  skipping build import with status 'Dismissed'
+2022.10.18 20:46:07 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+Oct 18, 2022 8:47:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.10.18 20:48:32 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:49:46 WARN  no build target for: C:\Users\Micah.Weiss\OneDrive - West Point\AY 23-1\CS478\HW\hw4\problem-set-4-micahweiss25\hw4.scala
+2022.10.18 20:49:46 INFO  skipping build import with status 'Dismissed'

@@ -1,4 +1,7 @@
 import scala.io.StdIn.readLine
+import scala.io.StdIn.readBoolean
+import scala.io.StdIn.readInt
+import scala.io.StdIn.readFloat
 object hw4 extends eecs.cs478:
   def userName = "ADD YOUR NAME(S) HERE"
 
@@ -238,12 +241,15 @@ object hw4 extends eecs.cs478:
       case (remainder, expr) => expr :: generateAst(remainder)
   enum Function:
     case Write
-    case Read 
+    case ReadStr
+    case ReadBool
+    case ReadFloat
+    case ReadInt
     case Custom(code : ASTNode)
   class  Environment(val functions : Map[String, Function], val variables : Map[String, Lit]):
     def ::(other : Environment) : Environment = Environment(functions ++ other.functions, variables ++ other.variables)
   def default_env : Environment =
-    return Environment(Map("write" -> Function.Write, "read" -> Function.Read), Map())
+    return Environment(Map("write" -> Function.Write, "readStr" -> Function.ReadStr, "readBool" -> Function.ReadBool, "readFloat" -> Function.ReadFloat, "readInt" -> Function.ReadInt), Map())
   def execute(nodes : List[ASTNode], env : Environment) : Unit =
     nodes match
       case head :: tail => execute(tail, execute_single_astnode(head, env)._1)
@@ -261,9 +267,17 @@ object hw4 extends eecs.cs478:
               case Lit.BOOL(b) => print(b)
               case Lit.VOID => print("You just printed nothing lol")
           (env, Lit.VOID)
-        case Function.Read => (env, Lit.STR(readLine()))
+        case Function.ReadStr      => (env, Lit.STR(readLine()))
+        case Function.ReadBool     => (env, Lit.BOOL(readBoolean()))
+        case Function.ReadFloat    => (env, Lit.FLT(readFloat()))
         //Add more of these read functions, for boolean, float, int, etc.
+<<<<<<< HEAD
         case Function.Custom(code) => (env, execute_single_astnode(code, env)._2)
+=======
+        case Function.Custom(code) => 
+          val newEnv = execute(List(code), env)
+          (newEnv, Lit.VOID)
+>>>>>>> 6549cf2f0a7ae0d033905b66b12395ec0a901d6e
       
       case ASTNode.LITERAL(lit) => (env, lit)
       case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => 
