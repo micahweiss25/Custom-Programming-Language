@@ -218,19 +218,19 @@ object hw4 extends eecs.cs478:
                 val left = getSingleExpression(rest)
                 val right = getSingleExpression(left._1.tail) // skip COMMA
                 a match
-                  case Keyword.ADD => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.ADD, left._2, right._2)) 
-                  case Keyword.SUBTRACT => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.SUBTRACT, left._2, right._2)) 
-                  case Keyword.MULTIPLY => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.MULTIPLY, left._2, right._2)) 
-                  case Keyword.DIVIDE => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.DIVIDE, left._2, right._2)) 
-                  case Keyword.LESS => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.LESS, left._2, right._2)) 
-                  case Keyword.GREATER => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.GREATER, left._2, right._2)) 
+                  case Keyword.ADD       => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.ADD, left._2, right._2)) 
+                  case Keyword.SUBTRACT  => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.SUBTRACT, left._2, right._2)) 
+                  case Keyword.MULTIPLY  => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.MULTIPLY, left._2, right._2)) 
+                  case Keyword.DIVIDE    => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.DIVIDE, left._2, right._2)) 
+                  case Keyword.LESS      => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.LESS, left._2, right._2)) 
+                  case Keyword.GREATER   => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.GREATER, left._2, right._2)) 
                   case Keyword.LESSEQUAL => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.LESSEQUAL, left._2, right._2)) 
                   case Keyword.GREATEREQUAL => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.GREATEREQUAL, left._2, right._2)) 
-                  case Keyword.EQUALS => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.EQUALS, left._2, right._2)) 
-                  case Keyword.NOTEQUAL => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.NOTEQUAL, left._2, right._2)) 
-                  case Keyword.AND => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.AND, left._2, right._2)) 
-                  case Keyword.OR => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.OR, left._2, right._2))
-                  case _ => (s, ASTNode.LIT(Lit.VOID))
+                  case Keyword.EQUALS    => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.EQUALS, left._2, right._2)) 
+                  case Keyword.NOTEQUAL  => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.NOTEQUAL, left._2, right._2)) 
+                  case Keyword.AND       => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.AND, left._2, right._2)) 
+                  case Keyword.OR        => (right._1.tail, ASTNode.BINARY_OPERATION(BinaryOperations.OR, left._2, right._2))
+                  case _                 => (s, ASTNode.LIT(Lit.VOID))
             }
       case _ => (s, ASTNode.LIT(Lit.VOID))
   def generateAst(tokens : List[Token]): List[ASTNode] =
@@ -248,6 +248,9 @@ object hw4 extends eecs.cs478:
     case Custom(code : ASTNode, args : List[String])
   class  Environment(val functions : Map[String, Function], val variables : Map[String, Lit]):
     def ::(other : Environment) : Environment = Environment(functions ++ other.functions, variables ++ other.variables)
+    def ::(other : Map[String,Lit]) : Environment = Environment(functions, variables ++ other.toMap)
+    //def ::(other : Map[String,Function]) : Environment = Environment(functions ++ other.toMap, variables)
+    def ::(other : (String, Function)) : Environment = Environment(functions + other, variables)
   def default_env : Environment =
     return Environment(Map("write" -> Function.Write, "readStr" -> Function.ReadStr, "readBool" -> Function.ReadBool, "readFloat" -> Function.ReadFloat, "readInt" -> Function.ReadInt), Map())
   def execute(nodes : List[ASTNode], env : Environment) : Unit =
@@ -261,36 +264,40 @@ object hw4 extends eecs.cs478:
         case Function.Write => 
           for item <- args do
             execute_single_astnode(item, env)._2 match
-              case Lit.FLT(f) => print(f)
-              case Lit.INT(i) => print(i)
-              case Lit.STR(s) => print(s)
+              case Lit.FLT(f)  => print(f)
+              case Lit.INT(i)  => print(i)
+              case Lit.STR(s)  => print(s)
               case Lit.BOOL(b) => print(b)
-              case Lit.VOID => print("You just printed nothing lol")
+              case Lit.VOID    => print("You just printed nothing lol")
           (env, Lit.VOID)
         case Function.ReadStr      => (env, Lit.STR(readLine()))
         case Function.ReadBool     => (env, Lit.BOOL(readBoolean()))
         case Function.ReadFloat    => (env, Lit.FLT(readFloat()))
         //Add more of these read functions, for boolean, float, int, etc.
-        case Function.Custom(code,argnames) => (env, execute_single_astnode(code, env)._2)
+        case Function.Custom(code,argnames) => {
+           var argsiter = args.iterator
+           val newvars = argnames.map(arg => (arg, execute_single_astnode(argsiter.next, env)._2)).toMap;
+           (newvars :: env, execute_single_astnode(code, env)._2) 
+        }
       
       case ASTNode.LITERAL(lit) => (env, lit)
       case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => 
         if execute_single_astnode(cond, env)._2 match //various things that can be used inside of conditionals
-          case Lit.FLT(f) => !f.isNaN()
-          case Lit.INT(i) => i != 0
-          case Lit.STR(s) => s != "" //not sure if cursed
+          case Lit.FLT(f)  => !f.isNaN()
+          case Lit.INT(i)  => i != 0
+          case Lit.STR(s)  => s != ""
           case Lit.BOOL(b) => b
-          case Lit.VOID => false
+          case Lit.VOID    => false
         then
           execute_single_astnode(ifTrue, env)
         else
           execute_single_astnode(ifFalse, env)
       case ASTNode.FN_DECLARATION(name, args, body) => 
-        ((Environment(Map(name -> Function.Custom(body, args)),Map()) :: env, Lit.VOID))
+        ((name, Function.Custom(body, args)) :: env, Lit.VOID)
       case ASTNode.VARIABLE_REFERENCE(name) => ???
       case ASTNode.LIT(lit) => (env, lit)
-      case ASTNode.BINARY_OPERATION(operation, left, right) => ???
-    
+      case ASTNode.BINARY_OPERATION(operation, left, right) => 
+        ???
   @main def rum =
     val tokens = wrapperFunction("hello_world.lang")
     println(s"tokens are $tokens")
