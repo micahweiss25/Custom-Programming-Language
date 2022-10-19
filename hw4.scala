@@ -245,7 +245,7 @@ object hw4 extends eecs.cs478:
     case ReadBool
     case ReadFloat
     case ReadInt
-    case Custom(code : ASTNode)
+    case Custom(code : ASTNode, args : List[String])
   class  Environment(val functions : Map[String, Function], val variables : Map[String, Lit]):
     def ::(other : Environment) : Environment = Environment(functions ++ other.functions, variables ++ other.variables)
   def default_env : Environment =
@@ -271,14 +271,14 @@ object hw4 extends eecs.cs478:
         case Function.ReadBool     => (env, Lit.BOOL(readBoolean()))
         case Function.ReadFloat    => (env, Lit.FLT(readFloat()))
         //Add more of these read functions, for boolean, float, int, etc.
-        case Function.Custom(code) => (env, execute_single_astnode(code, env)._2)
+        case Function.Custom(code,argnames) => (env, execute_single_astnode(code, env)._2)
       
       case ASTNode.LITERAL(lit) => (env, lit)
       case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => 
         if execute_single_astnode(cond, env)._2 match //various things that can be used inside of conditionals
           case Lit.FLT(f) => !f.isNaN()
           case Lit.INT(i) => i != 0
-          case Lit.STR(s) => s != ""
+          case Lit.STR(s) => s != "" //not sure if cursed
           case Lit.BOOL(b) => b
           case Lit.VOID => false
         then
@@ -286,7 +286,7 @@ object hw4 extends eecs.cs478:
         else
           execute_single_astnode(ifFalse, env)
       case ASTNode.FN_DECLARATION(name, args, body) => 
-        Environment(Map(name -> Function.Custom(body)))
+        ((Environment(Map(name -> Function.Custom(body, args)),Map()) :: env, Lit.VOID))
       case ASTNode.VARIABLE_REFERENCE(name) => ???
       case ASTNode.LIT(lit) => (env, lit)
       case ASTNode.BINARY_OPERATION(operation, left, right) => ???
