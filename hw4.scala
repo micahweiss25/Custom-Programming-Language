@@ -235,8 +235,45 @@ object hw4 extends eecs.cs478:
       case (_,ASTNode.LIT(Lit.VOID))  => Nil // end of AST
       // getSingleExpression(tokens) returns a tuple of (remaining tokens, ASTNode)
       case (remainder, expr) => expr :: generateAst(remainder)
+  enum Function:
+    case Write
+    case Read 
+    case Custom(code : ASTNode)
+  class  Environment(val functions : Map[String, Function], val variables : Map[String, Lit]):
+    def ::(other : Environment) : Environment = Environment(functions ++ other.functions, variables ++ other.variables)
+  def default_env : Environment =
+    return Environment(Map("write" -> Function.Write, "read" -> Function.Read), Map())
+  def execute(nodes : List[ASTNode], env : Environment) : Unit =
+    nodes match
+      case head :: tail => execute(tail, execute_single_astnode(head, env)._1)
+      case _ => ()
+    
+  def execute_single_astnode(node : ASTNode, env : Environment) : (Environment, Lit) = 
+    node match
+      case ASTNode.FN_CALL(name, args) => env.functions(name) match
+        case Function.Write => 
+          for item <- args do
+            execute_single_astnode(item, env)._2 match
+              case Lit.FLT(f) => print(f)
+              case Lit.INT(i) => print(i)
+              case Lit.STR(s) => print(s)
+              case Lit.BOOL(b) => print(b)
+              case Lit.VOID => print("You just printed nothing lol")
+            
+          (env, Lit.VOID)
+        case Function.Read => ???
+        case Function.Custom(code) => ???
       
+      case ASTNode.LITERAL(lit) => ???
+      case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => ???
+      case ASTNode.FN_DECLARATION(name, args, body) => ???
+      case ASTNode.VARIABLE_REFERENCE(name) => ???
+      case ASTNode.LIT(lit) => (env, lit)
+      case ASTNode.BINARY_OPERATION(operation, left, right) => ???
+    
   @main def rum =
-    val tokens = wrapperFunction("test.lang")
+    val tokens = wrapperFunction("hello_world.lang")
     println(s"tokens are $tokens")
-    println(generateAst(tokens))
+    val ast = generateAst(tokens)
+    println(ast)
+    execute(ast, default_env)
