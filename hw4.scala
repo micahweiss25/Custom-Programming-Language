@@ -271,13 +271,7 @@ object hw4 extends eecs.cs478:
         case Function.ReadBool     => (env, Lit.BOOL(readBoolean()))
         case Function.ReadFloat    => (env, Lit.FLT(readFloat()))
         //Add more of these read functions, for boolean, float, int, etc.
-<<<<<<< HEAD
         case Function.Custom(code) => (env, execute_single_astnode(code, env)._2)
-=======
-        case Function.Custom(code) => 
-          val newEnv = execute(List(code), env)
-          (newEnv, Lit.VOID)
->>>>>>> 6549cf2f0a7ae0d033905b66b12395ec0a901d6e
       
       case ASTNode.LITERAL(lit) => (env, lit)
       case ASTNode.IF_STATEMENT(cond, ifTrue, ifFalse) => 
