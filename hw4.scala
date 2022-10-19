@@ -296,8 +296,32 @@ object hw4 extends eecs.cs478:
         (leftEval, rightEval) match
           case (Lit.FLT(l), Lit.FLT(r)) => 
             operators match
-              case BinaryOperations.ADD => leftEval._2 + rightEval._2
-              case BinaryOperations.SUBTRACT => leftEval.
+              case BinaryOperations.ADD => (rightEval._1, Lit.FLT(l + r))
+              case BinaryOperations.SUBTRACT => (rightEval._1, Lit.FLT(l - r))
+              case BinaryOperations.DIVIDE => (rightEval._1, Lit.FLT(l / r))
+              case BinaryOperations.MULTIPLY => (rightEval._1, Lit.FLT(leftEval._2 * rightEval._2))
+              case BinaryOperations.NOTEQUAL => if l != r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.EQUALS => if l == r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.LESS => if l < r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.LESSEQUAL => if l <= r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.GREATER => if l > r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.GREATEREQUAL => if l >= r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.AND => if !l.isNaN() && !r.isNaN() then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.OR => if !l.isNaN() || !r.isNaN() then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+          case (Lit.INT(l), Lit.INT(r)) =>
+            operators match
+              case BinaryOperations.ADD => (rightEval._1, Lit.INT(l + r))
+              case BinaryOperations.SUBTRACT => (rightEval._1, Lit.INT(l - r))
+              case BinaryOperations.DIVIDE => (rightEval._1, Lit.INT(l / r))
+              case BinaryOperations.MULTIPLY => (rightEval._1, Lit.INT(leftEval._2 * rightEval._2))
+              case BinaryOperations.NOTEQUAL => if l != r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.EQUALS => if l == r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.LESS => if l < r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.LESSEQUAL => if l <= r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.GREATER => if l > r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              case BinaryOperations.GREATEREQUAL => if l >= r then (rightEval._1, Lit.BOOL(1)) else (rightEval._1, Lit.BOOL(0))
+              
+
   @main def rum =
     val tokens = wrapperFunction("hello_world.lang")
     println(s"tokens are $tokens")
